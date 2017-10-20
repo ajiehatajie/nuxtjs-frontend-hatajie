@@ -4,9 +4,10 @@
               <section class="about section">
                     <div class="section-inner">
                         <h1 class="post-title">{{ post.title }}</h1>
-                        <p><span class="post-date">{{dateFormat(post.created_at)}} 
-                        - created by {{ post.author_id.name}} </span> <br/>
-                        Category : {{ post.category.slug }}
+                        <p><span class="post-date">
+                        created {{dateFormat(post.created_at)}} 
+                         </span> <br/>
+                        category : <b>{{ post.category.slug }}</b>
                         </p>
                         <div class="content">
                             <p>
@@ -21,7 +22,7 @@
                data-href="https://hatajie.com/`{urlPath}`" data-numposts="5"></div>
                 <ul class="pagination">
                     <li class="page-item">
-                        <nuxt-link to="/"> Home 
+                        <nuxt-link to="/" class="btn btn-primary" >Back Home 
                         </nuxt-link>
                     </li>
                 </ul>

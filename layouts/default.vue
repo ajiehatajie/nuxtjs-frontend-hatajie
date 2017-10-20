@@ -3,21 +3,21 @@
       <header class="header">
            <div class="container">
             <img class="profile-image img-responsive"
-             src="/image.jpg" alt="James Lee" />
+             src="/image.jpg" alt="ajie hatajie" />
           
             <div class="profile-content pull-left">
                 <h1 class="name">Ajie Hatajie</h1>
                 <h2 class="desc">Web App Developer</h2>
               
-                <a class="btn btn-cta-primary" href="https://github.com/ajiehatajie">
+                <a class="btn btn-cta-primary" href="https://github.com/ajiehatajie" target="_blank">
                 <i class="fa fa-github"></i> Github</a>
                 <a class="btn btn-cta-primary" href="https://play.google.com/store/search?q=hatajie" target="_blank">
                 <i class="fa fa-android"></i> Mobile Apps</a>
                 <br/>
-                <a class="btn btn-cta-primary" href="https://twitter.com/ajiehatajie">
+                <a class="btn btn-cta-primary" href="https://twitter.com/ajiehatajie" target="_blank">
                 <i class="fa fa-twitter"></i> Twitter</a>
-                <a class="btn btn-cta-primary" href="mailto:me@hatajie.com">
-                <i class="fa fa-paper-plane"></i> Contact Me</a>
+                <a class="btn btn-cta-primary" href="https://t.me/ajiehatajie" target="_blank">
+                <i class="fa fa-paper-plane"></i> Telegram</a>
             
             </div><!--//profile-->
             <br/><br/><br/>
@@ -44,7 +44,6 @@
                          <div class="input-group">
                           <div v-if="search">
                             keyword search :  <b>{{ search }}</b>
-                            {{ searchStatus }}
                           </div>
                          
                          

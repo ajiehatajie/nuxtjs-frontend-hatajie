@@ -107,7 +107,7 @@ export const mutations = {
     console.log(payload)
   },
   [KEYWORD_SEARCH] (state, payload) {
-    console.log(payload)
+    // console.log(payload)
     state.searchStatus = payload
   }
 }

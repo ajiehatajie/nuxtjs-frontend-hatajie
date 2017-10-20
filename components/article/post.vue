@@ -6,9 +6,10 @@
                     <div class="section-inner">
                       
                         <h1 class="post-title">{{ post.title }}</h1>
-                        <p><span class="post-date">{{dateFormat(post.created_at)}} 
-                        - created by {{ post.author_id.name}} </span> <br/>
-                        Category : {{ post.category.slug }}
+                         <p><span class="post-date">
+                        created {{dateFormat(post.created_at)}} 
+                         </span> <br/>
+                        category : <b>{{ post.category.slug }}</b>
                         </p>
                         <div class="content">
                             <p>
@@ -21,7 +22,7 @@
              
                 <ul class="pagination">
                     <li class="page-item">
-                        <a href="#" @click.prevent="getPost()" class="page-item" >Home </a>
+                        <a href="#" @click.prevent="getPost()" class="btn btn-primary" > Back Home </a>
                     </li>
                 </ul>
         </div>
@@ -36,10 +37,11 @@
                         class="more-link" replace><i class="fa fa-external-link"></i>
                             {{ post.title }}</nuxt-link>
                     </h1>
-                    <p><span class="post-date">{{dateFormat(post.created_at)}} 
-                        - created by {{ post.author_id.name}} </span> <br/>
-                        Category : {{ post.category.slug }}
-                    </p>
+                   <p><span class="post-date">
+                        created {{dateFormat(post.created_at)}} 
+                         </span> <br/>
+                        category : <b>{{ post.category.slug }}</b>
+                        </p>
                     
                     <p>{{ post.excerpt }}</p>
                     <p>

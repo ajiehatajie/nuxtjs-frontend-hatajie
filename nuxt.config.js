@@ -3,12 +3,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Ajie Hatajie | Blog Catatan Kecil',
+    title: 'Blog Ajie Hatajie berisi Catatan Kecil',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'blog ajie hatajie ,berisi catatan kecil ',
-       content: 'catatan kecil ajie hatajie berisi pemprograman PHP,Javascript, Nodejs' }
+      { name: 'keywords', content: 'ajie hatajie, vuejs,php,laravel' },
+      { hid: 'description', name: 'blog ajie hatajie ,berisi catatan kecil berisi pemprograman PHP,Javascript, Nodejs', content: 'catatan kecil ajie hatajie berisi pemprograman PHP,Javascript, Nodejs' }
     ],
     script: [
       { src: '/js/scale.fix.js' },
@@ -27,9 +27,11 @@ module.exports = {
     ]
   },
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios', '@nuxtjs/google-analytics'
   ],
-
+  'google-analytics': {
+    id: 'UA-49819383-4'
+  },
   axios: {
     // proxyHeaders: false
   },
