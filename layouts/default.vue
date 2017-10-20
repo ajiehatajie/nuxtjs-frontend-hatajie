@@ -44,6 +44,7 @@
                          <div class="input-group">
                           <div v-if="search">
                             keyword search :  <b>{{ search }}</b>
+                            {{ searchStatus }}
                           </div>
                          
                          
@@ -69,27 +70,35 @@
 </div>
 </template>
 <script>
-import { mapActions } from 'vuex'
+import { mapActions,mapGetters } from 'vuex'
 export default {
     data() {
         return {
             search:''
         }
     },
+    computed: {
+        ...mapGetters(['searchStatus'])
+    },
     methods : {
         ...mapActions(['getSearchPost']),
         reset() {
             this.search = ''
+        },
+        UpdateState(param){
+            return  this.$store.commit('KEYWORD_SEARCH',param)
         }
     },
     watch : {
         search: function(val) {
             if(val.indexOf('search') > -1) {
-
+               
             }
+            // 
             this.$router.push('/')
             this.getSearchPost(val)
             console.log(val)
+            this.UpdateState(val)
         }
     }
 }

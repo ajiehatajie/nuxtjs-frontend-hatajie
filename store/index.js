@@ -2,6 +2,7 @@ const GET_DATA = 'GET_DATA'
 const GET_PAGING_POST = 'GET_PAGING_POST'
 const DETAIL_POST = 'DETAIL_POST'
 const API_ERROR = 'API_ERROR'
+const KEYWORD_SEARCH = 'KEYWORD_SEARCH'
 // const API_URL = 'http://hatajieblog.dev/api/v1/'
 const API_URL = 'https://api.hatajie.com/api/v1/'
 
@@ -11,7 +12,8 @@ export const state = () => ({
   post: null,
   paging_post: null,
   singleView: false,
-  slug: ''
+  slug: '',
+  searchStatus: ''
 })
 
 export const actions = {
@@ -33,7 +35,7 @@ export const actions = {
   },
   async getPostDetailSlug ({ commit }, param) {
     const uri = await this.$axios.$get(API_URL + 'post/' + param)
-    console.log(uri.data)
+    // console.log(uri.data)
     commit('GET_DATA', uri.data)
     commit('DETAIL_POST_SLUG', uri.data)
   },
@@ -47,6 +49,9 @@ export const actions = {
     // commit('DETAIL_POST', param)
     context.commit('DETAIL_POST', payload)
    //  console.log(payload)
+  },
+  updateSearch (context, payload) {
+    context.commit('KEYWORD_SEARCH', payload)
   }
 
 }
@@ -66,6 +71,9 @@ export const getters = {
   },
   slug: state => {
     return state.slug
+  },
+  searchStatus: state => {
+    return state.searchStatus
   }
 
 }
@@ -75,26 +83,31 @@ export const mutations = {
     state.posts = payload
     state.singleView = false
     state.paging_post = payload
+    // state.searchStatus = payload
     // console.log(payload)
   },
   [GET_PAGING_POST] (state, payload) {
     state.paging_post = payload
     // state.singleView = false
-    console.log(payload)
+    // console.log(payload)
   },
   [DETAIL_POST] (state, payload) {
     state.singleView = true
     state.post = payload
     state.slug = payload.slug
-    console.log(payload.slug + ' detail payload ')
+    // console.log(payload.slug + ' detail payload ')
   },
   [DETAIL_POST_SLUG] (state, payload) {
     state.singleView = true
     state.post = payload
     state.slug = payload.slug
-    console.log(payload + ' detail payload ')
+    // console.log(payload + ' detail payload ')
   },
   [API_ERROR] (state, payload) {
     console.log(payload)
+  },
+  [KEYWORD_SEARCH] (state, payload) {
+    console.log(payload)
+    state.searchStatus = payload
   }
 }
