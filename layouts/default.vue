@@ -35,7 +35,7 @@
                              </div>
                             <div v-else="search">
                                  <button class="btn btn-secondary" type="button"
-                                     @click="getSearchPost(search)" >Go</button>
+                                     @click="BackHome(search)" >Go</button>
                           </div>
                           </span>
                        
@@ -87,6 +87,10 @@ export default {
         },
         UpdateState(param){
             return  this.$store.commit('KEYWORD_SEARCH',param)
+        },
+        BackHome(param) {
+            this.$router.push('/')
+            this.getSearchPost(param)
         }
     },
     watch : {

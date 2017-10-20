@@ -1,3 +1,7 @@
+# di web hatajie.com 
+> blog saya itu pake shared hosting ada fungsi SSR yang gak jalan 
+> misal klo nembak langsung ke URL detail artikel bakal error 404 
+> tapi jika di jalanin nya di VPS dya gak error , result nya sesuai
 # blog
 
 > Nuxt.js project
