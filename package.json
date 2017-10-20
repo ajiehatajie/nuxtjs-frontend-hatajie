@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "ajiehatajie <hatajie@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^4.4.0",
+    "moment": "^2.19.1",
+    "nuxt": "^1.0.0-rc11"
+  },
+  "devDependencies": {
+    "babel-eslint": "7",
+    "eslint": "3.x",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
