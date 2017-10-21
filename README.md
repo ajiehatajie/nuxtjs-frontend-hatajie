@@ -4,6 +4,11 @@
 > tapi jika di jalanin nya di VPS dya gak error , result nya sesuai
 # blog
 
+# demo apps
+![Alt Text](https://media.giphy.com/media/3ohhwLhXHGZh7wr6Zq/giphy.gif)
+
+# blog saya sepertinya bakal saya ganti karena keperluan SEO jd live preview nya cuma di gif aja
+
 > Nuxt.js project
 
 ## Build Setup
