@@ -5,9 +5,10 @@
 # blog
 
 # demo apps
-![Alt Text](https://media.giphy.com/media/3ohhwLhXHGZh7wr6Zq/giphy.gif)
+![Alt Text](https://media.giphy.com/media/3ov9jRThYox8l4PTLW/giphy.gif)
 
-# blog saya sepertinya bakal saya ganti karena keperluan SEO jd live preview nya cuma di gif aja
+> blog saya sepertinya bakal saya ganti karena keperluan SEO jd live preview nya cuma di gif aja
+> mau pake VPS masih pikir pikir dlu hehe
 
 > Nuxt.js project
 
